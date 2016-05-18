@@ -54,7 +54,7 @@ __END__
     @comp = [:rock, :paper, :scissors][rand(3)]
     @html = ''
     
-    @html << "<p>You chose #{params[:game].capitalize} <BR>Your Nemesis chose #{@comp.to_s.capitalize}:</p>"  
+    @html << "<p>You chose: #{params[:game].capitalize} <BR>Your Nemesis chose: #{@comp.to_s.capitalize}</p>"  
     @html << '<p><b>'
     if @comp == params[:game].intern
       @html << 'Tie! :-/'
