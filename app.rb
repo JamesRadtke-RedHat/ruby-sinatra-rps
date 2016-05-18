@@ -30,7 +30,11 @@ __END__
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Rock-Paper-Scissors</title>
+	<title>Rock-Paper-Scissors Ruby Sinatra || &#169 2016 LinuxRevolution</title>
+<!-- 
+  This code was originally found at:
+  https://gist.github.com/citizen428/86780
+-->
 </head>
 <body>
 	<%= yield %>
@@ -38,7 +42,7 @@ __END__
 </html>
 
 @@ index
-<p>Select:</p>
+<p>Click on a button to select:</p>
 <form action="/" method="post" accept-charset="utf-8">
     <button type="submit" value="rock" name="game">Rock</button>
     <button type="submit" value="paper" name="game">Paper</button>
@@ -55,7 +59,7 @@ __END__
     if @comp == params[:game].intern
       @html << 'Tie! :-/'
     elsif @comp == @options[params[:game].intern]
-      @html << 'You win! :-)'
+      @html << 'Winning!!! :-)'
     else 
       @html << 'You loose! :-('
     end 
